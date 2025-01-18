@@ -1,4 +1,4 @@
-import os
+from os import system, name
 from random import randint
 from time import sleep
 import levels
@@ -6,7 +6,7 @@ import levels
 # Function for checking if the input is a correct value and in range
 def check_input(variable):
     try:
-        variable
+        variable = int(variable)
     except ValueError:
         print("Invalid input! Please enter a number.")
         return False
@@ -16,15 +16,13 @@ def check_input(variable):
     return True
 def clear_screen():
     # Check if the OS is Windows
-    if os.name == 'nt':
-        os.system('cls')  # Windows
+    if name == 'nt':
+        system('cls')  # Windows
     else:
-        os.system('clear')  # Linux or macOS
+        system('clear')  # Linux or macOS
 
-count_of_games = 0 # Keeping track of the number of games for the levels
-
-# Welcome messages
-print('Welcome to the game "GuessTheNumber"\n')
+# Welcome message
+print('🔢 Welcome to the game "GuessTheNumber" 🔢\n')
 
 close_program = False # Variable for exiting the loop
 while not close_program:
@@ -35,15 +33,16 @@ while not close_program:
     a = 1
     b = levels.limit_range()
 
-    print(f"Your opponent has thought of a number in the range between {a} and {b}. Can you guess it correctly? Let's see.")
+    print(f"Your opponent has thought of a number in the range between {a} and {b}. Can you guess it correctly?🤔 Let's see.")
 
     computer_number = randint(a, b) # Randomly generated number in the given range
     attempts = 0
 
     # Getting user's choice
-    choice = int(input("Enter your guess: "))
+    choice = input("Enter your guess: ")
     while not check_input(choice):
-        choice = int(input("Enter your guess: "))
+        choice = input("Enter your guess: ")
+    choice = int(choice)
 
     # Playing the game while the user's number is not correct
     while choice != computer_number:
@@ -52,18 +51,23 @@ while not close_program:
             print("Oops...too high. The number is lower.")
         else:
             print("Oops...too low. The number is higher.")
-        choice = int(input("Enter your guess: "))
+        choice = input("Enter your guess: ")
         while not check_input(choice):
-            choice = int(input("Enter your guess: "))
+            choice = input("Enter your guess: ")
+        choice = int(choice)
 
     # The final message after the user guesses the number
-    final_message = f"\nBINGO! You got it after {attempts}. Congratulations!"
+    final_message = f"\n✅ BINGO! You got it after {attempts} attempts. Congratulations!"
     if attempts > 7:
         final_message += " But there is still room for improvement."
     else:
         final_message += " This is a really good result, it seems you have a great intuition."
     print(final_message)
-    count_of_games += 1
+    levels.increment_games_played()
+
+    new_level = levels.user_level()
+    if level != new_level:
+        print(f"Congratulations! You leveled up! You are level {new_level} now.")
 
     # Asking if the player wants to play again
     play_again = input("\nWould you like to play again? Type Yes or No: ").lower()
@@ -77,5 +81,6 @@ while not close_program:
             print("Goodbye! Have a nice day")
             sleep(3)
             close_program = True
+            break
         else:
             play_again = input("I don't understand. Type Yes or No, please: ")

@@ -1,5 +1,5 @@
-from main import count_of_games
-level = 0
+level = 0 # The user's level
+count_of_games = 0 # Keeping track of the number of games for the levels
 
 def user_level():
     global level
@@ -27,3 +27,7 @@ def user_level():
 
 def limit_range():
     return level * 100
+
+def increment_games_played():
+    global count_of_games
+    count_of_games += 1
