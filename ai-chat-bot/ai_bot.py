@@ -2,7 +2,7 @@ from customization import personal_name
 
 import groq
 
-API_KEY = "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" # Personal API key
+API_KEY = "" # Personal API key
 bot_name = "AI"
 
 # Initialize Groq API client
