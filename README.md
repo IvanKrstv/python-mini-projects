@@ -1,4 +1,4 @@
-# Python mini projects
+# Python Mini Projects
 Welcome to the repository "Python mini projects" which consists of small projects, written in Python all by myself. Below this, there are a few words for each of these projects and a small demo. I am always ready to look at any suggestions for optimization of the projects and any ideas for new ones. 
 
 
@@ -13,3 +13,6 @@ This is a simple console app which gives the opportunity to the user to choose f
 
 [PythonPatterns](python-patterns/pattern_project.py)
 ### You can try the mini app online [here](https://replit.com/@igkrastev/PythonPatterns?popupId=aaa073cd-eba4-43e2-aee5-e398ae322edc). (Note: the screen will not be cleared properly online)
+
+## AI Text Bot
+This is a console AI chat bot which uses an API key from Groq. It is one of the fastest resposnding chat bots out there. It is yet to be possible to personalize it as I am still working on that. For security reasons I have not put my API key. Instead you can add your own between the "" on the API_KEY variable. You can generate one for free from [here](https://groq.com/).
