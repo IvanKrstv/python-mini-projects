@@ -1,5 +1,5 @@
-# Python mini games
-Welcome to the repository "Python mini games" which consists of small projects, written in Python all by myself. Below this, there are a few words for each of these projects and a small demo. I am always ready to look at any suggestions for optimization of the projects and ideas for new ones. 
+# Python mini projects
+Welcome to the repository "Python mini projects" which consists of small projects, written in Python all by myself. Below this, there are a few words for each of these projects and a small demo. I am always ready to look at any suggestions for optimization of the projects and any ideas for new ones. 
 
 
 ## Guess The Number
