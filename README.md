@@ -14,5 +14,5 @@ This is a simple console app which gives the opportunity to the user to choose f
 [PythonPatterns](python-patterns/pattern_project.py)
 ### You can try the mini app online [here](https://replit.com/@igkrastev/PythonPatterns?popupId=aaa073cd-eba4-43e2-aee5-e398ae322edc). (Note: the screen will not be cleared properly online)
 
-## AI Text Bot
+## Groq AI Tool
 This is a console AI chat bot which uses an API key from Groq. It is one of the fastest resposnding chat bots out there. It is yet to be possible to personalize it as I am still working on that. For security reasons I have not put my API key. Instead you can add your own between the "" on the API_KEY variable. You can generate one for free from [here](https://groq.com/).
