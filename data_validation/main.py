@@ -59,3 +59,5 @@ def main():
             print("Invalid choice! Please enter a number between 1 and 8!\n")
             continue
 
+if __name__ == '__main__':
+    main()
