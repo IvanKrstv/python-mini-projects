@@ -1,4 +1,10 @@
 from regex_validation import Validator
+from os import system
+
+
+def clear_screen():
+    system('pause')
+    system('cls')
 
 
 def menu():
@@ -85,6 +91,7 @@ def main():
             print("Invalid choice! Please enter a number between 1 and 8!\n")
             continue
 
+        clear_screen()
 
 if __name__ == '__main__':
     main()
