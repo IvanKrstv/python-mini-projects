@@ -16,3 +16,7 @@ This is a simple console app which gives the opportunity to the user to choose f
 ## Groq AI Tool 🤖
 This is a console AI chat bot which uses an API key from Groq. It is one of the fastest resposnding chat bots out there. It is yet to be possible to personalize it as I am still working on that. For security reasons I have not put my API key. Instead you can add your own between the "" on the API_KEY variable. You can generate one for free from [here](https://groq.com/).
 ### [GroqAI](ai-chat-bot/ai_bot.py)
+
+## Data Extraction And Validation ✅
+
+### [DataValidation](data_validation/main.py)
